@@ -1,1 +1,140 @@
+2021-04-24 12:46:01,782 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:05:04,972 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:05:21,148 ERROR: Exception on /register [POST] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1707, in _execute_context
+    cursor, statement, parameters, context
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
 
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\flask\microblog\app\routes.py", line 88, in register
+    if form.validate_on_submit():
+  File "e:\flask\microblog\venv\lib\site-packages\flask_wtf\form.py", line 100, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\form.py", line 318, in validate
+    return super(Form, self).validate(extra)
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\form.py", line 150, in validate
+    if not field.validate(self, extra):
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\fields\core.py", line 226, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\fields\core.py", line 246, in _run_validation_chain
+    validator(form, self)
+  File "E:\flask\microblog\app\forms.py", line 27, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2837, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1670, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1521, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 314, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1400, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1750, in _execute_context
+    e, statement, parameters, cursor, context
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1931, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1707, in _execute_context
+    cursor, statement, parameters, context
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('duy', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-04-24 13:05:51,243 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:05:55,668 ERROR: Exception on /register [POST] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1707, in _execute_context
+    cursor, statement, parameters, context
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\flask\microblog\app\routes.py", line 88, in register
+    if form.validate_on_submit():
+  File "e:\flask\microblog\venv\lib\site-packages\flask_wtf\form.py", line 100, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\form.py", line 318, in validate
+    return super(Form, self).validate(extra)
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\form.py", line 150, in validate
+    if not field.validate(self, extra):
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\fields\core.py", line 226, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "e:\flask\microblog\venv\lib\site-packages\wtforms\fields\core.py", line 246, in _run_validation_chain
+    validator(form, self)
+  File "E:\flask\microblog\app\forms.py", line 27, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2837, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1670, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1521, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 314, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1400, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1750, in _execute_context
+    e, statement, parameters, cursor, context
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1931, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1707, in _execute_context
+    cursor, statement, parameters, context
+  File "e:\flask\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('duy', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-04-24 13:06:29,921 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:06:37,713 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:17:17,019 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:17:29,563 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]
+2021-04-24 13:17:35,977 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:52]

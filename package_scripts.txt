@@ -1,1 +1,1 @@
-pip install flask flask-wtf python-dotenv flask-sqlalchemy flask-migrate flask-login email-validator flask-mail pyjwt flask-bootstrap flask-moment flask-babel 
+pip install autopep8 pylint flask flask-wtf python-dotenv flask-sqlalchemy flask-migrate flask-login email-validator flask-mail pyjwt flask-bootstrap flask-moment flask-babel 

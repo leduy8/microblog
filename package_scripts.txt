@@ -1,1 +1,9 @@
-pip install autopep8 pylint flask flask-wtf python-dotenv flask-sqlalchemy flask-migrate flask-login email-validator flask-mail pyjwt flask-bootstrap flask-moment flask-babel 
+pip install autopep8 pylint flask flask-wtf python-dotenv flask-sqlalchemy flask-migrate flask-login email-validator flask-mail pyjwt flask-bootstrap flask-moment flask-babel elasticsearch
+
+MAIL_SERVER = smtp.googlemail.com
+MAIL_PORT = 587
+MAIL_USE_TLS = 1
+MAIL_USERNAME = <gmail_username>
+MAIL_PASSWORD = <gmail_password>
+
+start elasticsearch in elasticsearch zip bin folder: elasticsearch.bat

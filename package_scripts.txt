@@ -6,4 +6,6 @@ MAIL_USE_TLS = 1
 MAIL_USERNAME = <gmail_username>
 MAIL_PASSWORD = <gmail_password>
 
+
+ELASTICSEARCH_URL=http://localhost:9200 (paste in the .env file)
 start elasticsearch in elasticsearch zip bin folder: elasticsearch.bat

@@ -1,4 +1,4 @@
-2021-04-26 22:19:23,659 ERROR: Exception on / [GET] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
+2021-05-01 11:50:45,694 ERROR: Exception on /index [GET] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -31,7 +31,40 @@ Traceback (most recent call last):
   File "e:\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2021-04-26 22:19:40,353 ERROR: Exception on /search [GET] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
+2021-05-01 11:51:17,645 ERROR: Exception on /index [GET] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "e:\flask\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "e:\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "e:\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2021-05-01 11:52:32,167 ERROR: Exception on /search [GET] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -48,43 +81,5 @@ Traceback (most recent call last):
   File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
   File "E:\flask\microblog\app\main\routes.py", line 132, in search
-    next_url = url_for('main.search', q=g.search_form.q.data, page = page + 1) if total > page * current_app.config['POSTS_PER_PAGE'] else None
-TypeError: '>' not supported between instances of 'dict' and 'int'
-2021-04-26 22:24:51,590 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:74]
-2021-04-26 22:27:37,131 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:74]
-2021-04-30 22:14:54,106 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:74]
-2021-04-30 22:14:56,053 ERROR: Exception on / [GET] [in e:\flask\microblog\venv\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "e:\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
-    return current_app.login_manager.unauthorized()
-  File "e:\flask\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 174, in unauthorized
-    redirect_url = make_login_url(login_view, next_url=request.url)
-  File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 120, in login_url
-    base = expand_login_view(login_view)
-  File "e:\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
-    return url_for(login_view)
-  File "e:\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "e:\flask\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "e:\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "e:\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "e:\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2021-04-30 22:16:27,828 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:74]
-2021-04-30 22:53:39,367 INFO: Microblog startup [in E:\flask\microblog\app\__init__.py:74]
+    next_url = url_for('main.search', q=g.search_form.q.data, page = page + 1) if total['value'] > page * current_app.config['POSTS_PER_PAGE'] else None
+TypeError: 'int' object is not subscriptable

@@ -1,4 +1,4 @@
-pip install autopep8 pylint flask flask-wtf python-dotenv flask-sqlalchemy flask-migrate flask-login email-validator flask-mail pyjwt flask-bootstrap flask-moment flask-babel elasticsearch
+pip install autopep8 pylint flask flask-wtf python-dotenv flask-sqlalchemy flask-migrate flask-login email-validator flask-mail pyjwt flask-bootstrap flask-moment flask-babel elasticsearch httpie flask-httpauth
 
 MAIL_SERVER = smtp.googlemail.com
 MAIL_PORT = 587
